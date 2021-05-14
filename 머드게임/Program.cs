@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace 머드게임
 {
@@ -227,8 +228,9 @@ GameOver
             return false;
         }
 
-        private static void Print(Object log)
+        static void Print(Object log)
         {
+            Debug.WriteLine(log);
             Console.WriteLine(log);
         }
 

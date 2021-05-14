@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace 머드게임
 {
@@ -38,12 +39,15 @@ namespace 머드게임
 
         public Monster(int dungeonLevel)
         {
+            string log = "콘솔과 출력창에 동시 출력";
+            Print(log);
             id = ++idTotal;
 
             name = "몬스터" + id;
             power = random.Next(1, 2);
             hp = random.Next(1, 2) + dungeonLevel;
         }
+
 
         virtual public void OnAttack(Player targetPlayer)
         {
@@ -63,8 +67,9 @@ namespace 머드게임
             Print($"{name}의 체력이 {hp}가 되었다");
         }
 
-        private void Print(string log)
+        private static void Print(Object log)
         {
+            Debug.WriteLine(log);
             Console.WriteLine(log);
         }
     }
