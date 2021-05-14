@@ -33,15 +33,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMud", "MyMud\MyMud.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "입력한 키에 따라 루프 반복(Y N)", "질문과답\입력한 키에 따라 루프 반복(Y N).csproj", "{9F1C4E0E-7879-4C59-AFEB-EC5A74879C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual 함수 사용법_상속없이 구현", "Virtual 함수 사용법\Virtual 함수 사용법_상속없이 구현.csproj", "{4830DC94-6079-4FBD-A3DA-5690D8BADF95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Virtual 함수 사용법_상속없이 구현", "Virtual 함수 사용법\Virtual 함수 사용법_상속없이 구현.csproj", "{4830DC94-6079-4FBD-A3DA-5690D8BADF95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual 함수 사용법_상속으로 구현", "Virtual 함수 사용법_상속으로 구현\Virtual 함수 사용법_상속으로 구현.csproj", "{E8AC9F15-922C-46FD-B2B7-53AAEB8A1401}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Virtual 함수 사용법_상속으로 구현", "Virtual 함수 사용법_상속으로 구현\Virtual 함수 사용법_상속으로 구현.csproj", "{E8AC9F15-922C-46FD-B2B7-53AAEB8A1401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual 함수 사용법_인터페이스로 구현", "Virtual 함수 사용법_인터페이스로 구현\Virtual 함수 사용법_인터페이스로 구현.csproj", "{04BD6D5F-02BD-4149-ACA1-A9F759563D21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Virtual 함수 사용법_인터페이스로 구현", "Virtual 함수 사용법_인터페이스로 구현\Virtual 함수 사용법_인터페이스로 구현.csproj", "{04BD6D5F-02BD-4149-ACA1-A9F759563D21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "속성(Property)사용법", "속성(Property)사용법\속성(Property)사용법.csproj", "{28941BB5-3D0B-42F7-BE5B-F4A54506D9AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "속성(Property)사용법", "속성(Property)사용법\속성(Property)사용법.csproj", "{28941BB5-3D0B-42F7-BE5B-F4A54506D9AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort_버블정렬", "Sort_버블정렬\Sort_버블정렬.csproj", "{EA76CC46-4226-442C-8545-27168B4B74DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sort_버블정렬", "Sort_버블정렬\Sort_버블정렬.csproj", "{EA76CC46-4226-442C-8545-27168B4B74DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List에 함수 넣어서 실행하기", "List에 함수 넣어서 실행하기\List에 함수 넣어서 실행하기.csproj", "{6A97808D-D528-4E82-A0BB-CCFD13039F89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -293,6 +295,18 @@ Global
 		{EA76CC46-4226-442C-8545-27168B4B74DB}.Release|x64.Build.0 = Release|Any CPU
 		{EA76CC46-4226-442C-8545-27168B4B74DB}.Release|x86.ActiveCfg = Release|Any CPU
 		{EA76CC46-4226-442C-8545-27168B4B74DB}.Release|x86.Build.0 = Release|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Release|x64.Build.0 = Release|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A97808D-D528-4E82-A0BB-CCFD13039F89}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
