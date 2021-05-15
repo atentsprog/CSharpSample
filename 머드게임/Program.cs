@@ -147,13 +147,14 @@ GameOver
 
         private static string GetAllowedAnswer(params string[] alllowsAnserStringArray)
         {
-            string retryOrQuit;
+            string userInputString;
             List<string> allowedAnswer = new List<string>(alllowsAnserStringArray);
             do
             {
-                retryOrQuit = Console.ReadLine().ToUpper();
-            } while (allowedAnswer.Contains(retryOrQuit) == false);
-            return retryOrQuit;
+                userInputString = Console.ReadLine().ToUpper();
+            } while (allowedAnswer.Contains(userInputString) == false);
+
+            return userInputString;
         }
 
         private static void MonsterTurn(Player player, List<Monster> monsters)
@@ -196,19 +197,19 @@ GameOver
         {
             Print("");
             Print("1:공격, 2:광역공격, 3:회복, 4:도망");
-            char userInput = GetAllowedAnswer("1", "2", "3", "4")[0];
+            string userInput = GetAllowedAnswer("1", "2", "3", "4");
             switch (userInput)
             {
-                case '1':// 공격
+                case "1":// 공격
                     PlayerAttack(player, monsters);
                     break;
-                case '2': // 광역 공격
+                case "2": // 광역 공격
                     PlayerAttack(player, monsters, AttackType.광역공격);
                     break;
-                case '3': // 회복
+                case "3": // 회복
                     player.RestoreHp();
                     break;
-                case '4': // 도망.
+                case "4": // 도망.
                     bool successRun = TryRun();
 
                     string log;

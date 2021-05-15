@@ -8,11 +8,11 @@ namespace 질문과답
         // y, n에 따라 루프 반복.
         static void Main(string[] args)
         {
-            //DoWhileVersion();
+            DoWhileVersion();
 
             //WhileVersion();
 
-            ForVersion();
+            //ForVersion();
         }
 
         private static void ForVersion()
@@ -44,12 +44,26 @@ namespace 질문과답
         private static void DoWhileVersion()
         {
             int tryCount = 0;
+
+            string answer;
+            Player player;
             //반복.
             do
             {
-                Console.WriteLine($"{++tryCount}번째 시도, 어떤 일을 여기서 합니다");
-                Console.WriteLine("다시 하시겠습니까? (Y)es/(N)o");
-            } while (Console.ReadLine().ToUpper() == "Y");
+                player = new Player();
+                player.hp = 10;
+                Console.WriteLine($"플레이어의 hp 는 {player.hp}입니다. 다시 만드시겠습니까?(Y/N)");
+                answer = Console.ReadLine().ToUpper();
+                //Y 루프를 반복하자.
+                // Y가 아닐 경우 루프를 나가자.
+            } while (answer != "Y");
+
+            Console.WriteLine(player.hp);
         }
+    }
+
+    internal class Player
+    {
+        internal int hp;
     }
 }
