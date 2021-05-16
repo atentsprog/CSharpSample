@@ -5,7 +5,7 @@ namespace Virtual_함수_사용법_상속으로_구현
 {
     class Monster
     {
-        virtual public void Attack(Player player)
+        public virtual void Attack(Player player)
         {
             Console.WriteLine("여기는 자식이 override한 함수가 없을때만 호출됨");
         }

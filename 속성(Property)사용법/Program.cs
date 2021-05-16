@@ -12,24 +12,25 @@ namespace 속성_Property_사용법
         {
             var temp = power;
             power = value;
+
             Console.WriteLine($"함수 사용해서 Power 변경 {temp} -> {power}");
 
-            if(power <= 0)
-                Console.WriteLine("파워는 0보다 작으면 안되요! 분명 프로그래머가 실수 했어요");
+            Debug.Assert (power > 0, "파워는 0보다 작으면 안되요! 분명 프로그래머가 실수 했어요");
         }
         #endregion 끝) power 를 함수 사용해서 접근 구현 
 
         #region hp 를 속성 사용해서 접근 구현
         int hp;
+
         public int HP // 프로퍼티는 대문자로 시작(코딩 규칙)
         {
-            get {
-                return hp; }
+            get {return hp;}
             set
             {
                 var temp = hp;
                 hp = value;
                 Console.WriteLine($"프로퍼티로 hp 변경 {temp} -> {hp}");
+
 
                 // Assert : 조건이 true일 거라고 확신한다, 조건이 false라면 디버깅 모드로 실행했을때 자동으로 breakpoint 걸린다. 
                 Debug.Assert(hp < 10000, "HP가 10000보다 크다는건 프로그래머가 실수 했거나. 유저가 해킹한거에요, 이 유저를 밴 합시다");
@@ -37,7 +38,7 @@ namespace 속성_Property_사용법
         }
         #endregion 끝) hp 를 속성 사용해서 접근 구현 
 
-
+        // 일반적인 변수를 통해서 접근.
         public string name; // 접근 권한 공통. 브레이크포인트 걸 수 없음. 추가 동작 지정불가
 
         // 매직 변수는 클래스 내부에서만 설정 가능하고 (private)

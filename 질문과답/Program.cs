@@ -4,15 +4,17 @@ namespace 질문과답
 {
     class Program
     {
+        // do while : 최초 1번  실행하고 조건 검사후 반복할때 사용.
+        // while : 조건 검사후 반복할때 사용. <- 최초 1회 검사할때도 사용가능하나 조금 불편
 
         // y, n에 따라 루프 반복.
         static void Main(string[] args)
         {
-            DoWhileVersion();
+            //DoWhileVersion();
 
             //WhileVersion();
 
-            //ForVersion();
+            ForVersion();
         }
 
         private static void ForVersion()
@@ -30,6 +32,7 @@ namespace 질문과답
 
         private static void WhileVersion()
         {
+            /*
             int tryCount = 0;
             bool reTry = true;
             //반복.
@@ -39,12 +42,18 @@ namespace 질문과답
                 Console.WriteLine("다시 하시겠습니까? (Y)es/(N)o");
                 reTry = Console.ReadLine().ToUpper() == "Y";
             } 
+            */
+
+            int tryCount = 0;
+            do
+            {
+                Console.WriteLine($"[While문 사용]{++tryCount}번째 시도, 어떤 일을 여기서 합니다");
+                Console.WriteLine("다시 하시겠습니까? (Y)es/(N)o");
+            } while (Console.ReadLine().ToUpper() == "Y");
         }
 
         private static void DoWhileVersion()
         {
-            int tryCount = 0;
-
             string answer;
             Player player;
             //반복.
