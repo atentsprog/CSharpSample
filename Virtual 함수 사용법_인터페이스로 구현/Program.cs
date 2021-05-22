@@ -14,6 +14,7 @@ namespace Virtual_함수_사용법_인터페이스로_구현
 
     class ChildMonsterA : Monster, IAttack // 클래스는 1개만 상속 가능하지만 인터페이스는 갯수 제한 없음
     {
+        int myInt;
         public void Attack(Player player)
         {
             Console.WriteLine("A Attack");
