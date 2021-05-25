@@ -13,14 +13,10 @@ namespace Virtual_함수_사용법_상속으로_구현
 
     class ChildMonsterA : Monster
     {
-        override public void Attack(Player player)
-        {
-            Console.WriteLine("A Attack");
-        }
     }
     class ChildMonsterB : Monster
     {
-        override public void Attack(Player player)
+        public void Attack(Player player)
         {
             Console.WriteLine("B Attack");
         }
