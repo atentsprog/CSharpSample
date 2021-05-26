@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
 
 namespace 머드게임
 {
@@ -226,7 +228,46 @@ GameOver
                     break;
             }
 
+            PrintParams("없는 명령어 입니다" + userInput, "두번째 문자열", "세번째문자열", 1);
+            PrintArray(new Object[]{ "없는 명령어 입니다" + userInput, "두번째 문자열", "세번째문자열", 1});
             return false;
+        }
+        static void PrintParams(params Object[] log)
+        {
+            // StringBuilder 버전
+            //StringBuilder sb = new StringBuilder();
+            //for (int i = 0; i < log.Length; i++)
+            //{
+            //    sb.AppendLine(log[i].ToString());
+            //}
+
+            //Debug.WriteLine(sb.ToString());
+            //Console.WriteLine(sb.ToString());
+
+            // string 버전
+            string result = "";
+            for (int i = 0; i < log.Length; i++)
+            {
+                result += log[i].ToString() + "\n";
+            }
+
+            Debug.WriteLine(result);
+            Console.WriteLine(result);
+
+
+            //// Linq버전
+            //List<Object> objs = new List<object>(log);
+            //string result = objs.Select(x => x.ToString())
+            //    .Aggregate((string s1, string s2) => { return s1 + "," + s2; });
+
+            //Debug.WriteLine(result);
+            //Console.WriteLine(result);
+        }
+
+        static void PrintArray(Object[] log)
+        {
+            Debug.WriteLine(log);
+            Console.WriteLine(log);
         }
 
         static void Print(Object log)
