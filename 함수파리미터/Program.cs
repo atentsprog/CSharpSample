@@ -17,21 +17,41 @@ namespace 함수파리미터
             MyClass myClass = new MyClass();
 
             // 일반 파라미터
-            Fn(myClass.i);
+            Fn(i);
+            FnClassChangeValue(myClass);
+
+            // null 넘길때와 레퍼런스로 넘길때의 차이
+            myClass = null;
+            FnClass(myClass);
+            FnClassRef(ref myClass);
 
             // 3. ref
             FnRef(ref myClass.i);
             //FnRef(ref myClass.propertyI); // 에러 안됨
 
             //1. in
-            FnIn(in myClass.i);
+            FnIn(in i);
             //FnRef(in myClass.propertyI); // 에러 안됨
 
             // 2. out
-            FnOut(out myClass.i);
-            FnRef(out myClass.propertyI); // 에러 안됨
+            FnOut(out i);
+            //FnRef(out myClass.propertyI); // 에러 안됨
         }
 
+        private static void FnClassRef(ref MyClass myClass)
+        {
+            myClass = new MyClass();
+        }
+
+        private static void FnClass(MyClass myClass)
+        {
+            myClass = new MyClass();
+        }
+
+        private static void FnClassChangeValue(MyClass myClass)
+        {
+            myClass.i++;
+        }
         private static void Fn(int i)
         {
             i++;
