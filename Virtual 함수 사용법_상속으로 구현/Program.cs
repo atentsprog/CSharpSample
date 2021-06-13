@@ -30,9 +30,42 @@ namespace Virtual_함수_사용법_상속으로_구현
         }
     }
 
-    class Player
+    class Player : IDo1, IDo2
     {
+
+        public void Do1()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Do2()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IDo1.Do()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IDo2.Do()
+        {
+            throw new NotImplementedException();
+        }
     }
+
+    internal interface IDo2
+    {
+        void Do2();
+        void Do();
+    }
+
+    internal interface IDo1
+    {
+        void Do1();
+        void Do();
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -40,6 +73,8 @@ namespace Virtual_함수_사용법_상속으로_구현
             Console.WriteLine("virtual 사용법 - 상속으로 구현");
 
             Player player = new Player();
+            ((IDo1)player).Do();
+            ((IDo2)player).Do();
 
             ChildMonsterA a1 = new ChildMonsterA();
             ChildMonsterA a2 = new ChildMonsterA();
