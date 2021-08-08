@@ -11,6 +11,7 @@ namespace 형변환
             RichMan richMan = rich + man;
             VeryRich veryRich = rich + rich;
             Rich rich3 = (Rich)veryRich;
+            Rich rich4 = richMan;
             Console.WriteLine($"name:{richMan.name}, money:{richMan.money}");
         }
     }
@@ -65,5 +66,11 @@ namespace 형변환
     {
         public int money;
         public string name;
+
+        // 암시적 형변환
+        public static implicit operator Rich(RichMan b)
+        {
+            return new Rich(b.money);
+        }
     }
 }
